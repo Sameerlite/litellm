@@ -24,6 +24,7 @@ ROUTE_ENDPOINT_MAPPING = {
     "aresponses": "/responses",
     "alist_input_items": "/responses/{response_id}/input_items",
     "aimage_edit": "/images/edits",
+    "acancel_responses": "/responses/{response_id}/cancel",
 }
 
 
@@ -70,6 +71,8 @@ async def route_request(
         "aresponses",
         "aget_responses",
         "adelete_responses",
+        "acancel_responses",
+        "acreate_response_reply",
         "alist_input_items",
         "_arealtime",  # private function for realtime API
         "aimage_edit",
@@ -154,6 +157,7 @@ async def route_request(
                 "amoderation",
                 "aget_responses",
                 "adelete_responses",
+                "acancel_responses",
                 "alist_input_items",
                 "avector_store_create",
                 "avector_store_search",
