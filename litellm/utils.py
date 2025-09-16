@@ -7325,6 +7325,12 @@ class ProviderConfigManager:
             )
 
             return VLLMPassthroughConfig()
+        elif LlmProviders.VERTEX_AI == provider or LlmProviders.VERTEX_AI_BETA == provider:
+            from litellm.llms.vertex_ai.passthrough.transformation import (
+                VertexAIPassthroughConfig,
+            )
+
+            return VertexAIPassthroughConfig()
 
         return None
 
